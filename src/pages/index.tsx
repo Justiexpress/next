@@ -497,12 +497,4 @@ const Home: React.FC<HomeProps> = ({ trackConversion }) => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async () => {
-  // Aquí podrías obtener datos de una API o CMS si fuera necesario
-  return {
-    props: {}, // Se pasarán a la página como props
-    revalidate: 86400, // Regenerar la página cada 24 horas (en segundos)
-  };
-};
-
 export default Home;
