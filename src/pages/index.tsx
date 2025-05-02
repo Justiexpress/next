@@ -489,7 +489,7 @@ const Home: React.FC<HomeProps> = ({ trackConversion }) => {
               darkMode={true}
               allowClickAway={true}
               aria-label="Chat de WhatsApp para consultas legales"
-              onClick={() => trackConversion('whatsapp_click', {position: 'floating_button'})}
+              onClick={() => trackConversion?.('whatsapp_click', {position: 'floating_button'})}
             />
         </aside>
       </main>
