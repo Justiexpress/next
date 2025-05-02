@@ -1,0 +1,53 @@
+.contactanos {
+    margin-top: 50px;
+    margin-bottom: 25px;
+    scroll-margin-top: 200px;
+    margin-left: 40px;
+  }
+  
+  .contactanos i {
+    font-size: 6.5rem;
+    justify-content: center;
+    color: rgb(188, 189, 253);
+    display: flex;
+    animation: mymove 5s infinite;
+    margin-top: 40px;
+  }
+  
+  .contactanos .form-control {
+    min-width: 0;
+    width: 100%;
+    display: inline;
+  }
+  
+  .submitButton {
+    margin-top: 10px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #111;
+    background-color: white;
+    border-color: rgb(18, 5, 42);
+    width: 60%;
+  }
+  
+  .submitButton:hover {
+    color: #c2f4fe;
+    background-color: #04171b;
+    font-weight: 400;
+  }
+  
+  .errorCaptcha {
+    color: red;
+    margin-bottom: 20px;
+    text-align: 30px;
+  }
+  
+  .contactanos h3 {
+    margin-bottom: 40px;
+  }
+  
+  @keyframes mymove {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+  }

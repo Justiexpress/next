@@ -1,0 +1,60 @@
+.contador {
+    margin-bottom: 50px;
+  }
+  
+  .card {
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    padding: 20px 0 20px 0;
+  
+    @media only screen and (max-width: 992px) {
+      padding: 10px;
+    }
+    @media only screen and (max-width: 775px) {
+      padding: 5px;
+    }
+    @media only screen and (max-width: 575px) {
+      max-width: 250px;
+      margin-left: 60px;
+      margin-top: 15px;
+    }
+  
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  
+  .icon {
+    font-size: 3.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    
+    @media only screen and (max-width: 992px) and (min-width: 776px) {
+      font-size: 3rem;
+    }
+    @media only screen and (max-width: 775px) and (min-width: 575px) {
+      font-size: 3rem;
+    }
+    @media only screen and (max-width: 575px) {
+      font-size: 3rem;
+    }
+  }
+  
+  .card-title {
+    font-size: 170%;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+    @media only screen and (max-width: 992px) {
+      font-size: 120%;
+    }
+    @media only screen and (max-width: 775px) {
+      font-size: 100%;
+    }
+    @media only screen and (max-width: 575px) {
+      font-size: 130%;
+    }
+  }

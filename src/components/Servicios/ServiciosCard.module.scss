@@ -1,0 +1,101 @@
+.serviciosCard {
+  scroll-margin-top: 200px;
+  
+  i {
+    font-size: 4rem;
+    
+    @media only screen and (max-width: 992px) and (min-width: 776px) {
+      font-size: 3rem;
+    }
+    @media only screen and (max-width: 775px) and (min-width: 575px) {
+      font-size: 3rem;
+    }
+  }
+  
+  a {
+    background-color: white;
+    cursor: default;
+  }
+  
+  .cardServicio {
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 0 10px 40px 10px;
+    background: #fff;
+    box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    
+    @media only screen and (max-width: 992px) {
+      padding: 10px;
+    }
+    @media only screen and (max-width: 775px) {
+      padding: 5px;
+    }
+    @media only screen and (max-width: 575px) {
+      padding: 5px;
+      max-width: 250px;
+      margin-left: 75px;
+    }
+  }
+  
+  h4 {
+    font-size: 19px;
+  }
+  
+  .descriptionText {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    max-width: 90%;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cardServicio:hover {
+    transform: scale(1.1);
+    i {
+      color: #04171b !important;
+      text-shadow: 0 0 7px black;
+    }
+    h4 {
+      font-size: 22px;
+    }
+  }
+  
+  .button {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #613106;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    @media only screen and (max-width: 992px) {
+      font-size: 15px;
+    }
+    @media only screen and (max-width: 775px) {
+      font-size: 15px;
+    }
+    @media only screen and (max-width: 575px) {
+      font-size: 18px;
+    }
+  }
+  
+  .cardServicio:hover .button {
+    color: #c2f4fe;
+    background-color: #04171b;
+    font-weight: 400;
+    border-color: #04171b;
+  }
+}

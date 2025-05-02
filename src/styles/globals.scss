@@ -1,0 +1,130 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+// Importar la fuente Open Sans
+@import '@fontsource/open-sans/index.css';
+@import '@fontsource/open-sans/400.css';
+@import '@fontsource/open-sans/500.css';
+@import '@fontsource/open-sans/600.css';
+
+// Estilos base (equivalente a index.scss)
+html {
+  font-family: "Open Sans", sans-serif;
+  top: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: white !important;
+}
+
+h1 {
+  font-weight: 600 !important;
+  font-size: 35px !important;
+  text-align: center;
+  margin-left: 20px;
+}
+
+h2 {
+  font-weight: 500 !important;
+  font-size: 20px !important;
+  text-align: justify;
+  padding: 20px;
+  margin-left: 25px;
+}
+
+h3, h4 {
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  padding: 0;
+  font-size: 18px;
+  text-align: justify;
+  margin-left: 40px;
+}
+
+a {
+  color: #03c4eb;
+  transition: 0.5s;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: #03c5ec;
+  outline: none;
+  text-decoration: none;
+}
+
+.section-title-divider {
+  width: 50px;
+  height: 3px;
+  background: #04171b;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  margin-top: 25px;
+
+}
+
+// Estilos de páginas (equivalente a App.scss)
+#TyC, #Privacidad, #Pages, #Home {
+  margin-top: 120px;
+  
+  .aPages {
+    font-weight: 400;
+    font-size: 25px;
+    color: #c2f4fe;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 20px;
+    background: #04171b;
+    padding: 10px;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .aPages {
+      font-size: 18px;
+    }
+  }
+  
+  .aPages:hover {
+    font-weight: 500;
+    transform: scale(1.1);
+  }
+  
+  .Iframe {
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    border: 7px double #171717;
+    border-radius: 25px;
+    
+    @media only screen and (max-width: 992px) {
+      margin-left: 165px;
+    }
+    
+    @media only screen and (max-width: 775px) {
+      margin-left: 155px;
+    }
+    
+    @media only screen and (max-width: 570px) {
+      margin-left: 125px;
+    }
+    
+    @media only screen and (max-width: 500px) {
+      margin-left: 110px;
+    }
+    
+    @media only screen and (max-width: 450px) {
+      margin-left: 95px;
+    }
+  }
+}

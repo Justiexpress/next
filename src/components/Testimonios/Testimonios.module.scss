@@ -1,0 +1,73 @@
+/* Estilos para la sección de testimonios */
+#Testimonios {
+    margin-bottom: 50px;
+    scroll-margin-top: 200px;
+  }
+  
+  /* Estilos para el carrusel de testimonios */
+  .testimoniosCarusel {
+    max-width: 800px;
+    margin: auto;
+  
+    .card {
+      padding-left: 10%;
+      padding-right: 10%;
+      background: #04171b;
+      border-radius: 40px;
+      height: 250px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  
+    @media only screen and (max-width: 992px) {
+      max-width: 600px;
+      p {
+        font-size: 15px;
+      }
+      .card {
+        height: 250px;
+      }
+    }
+  
+    @media only screen and (max-width: 775px) {
+      max-width: 400px;
+      p {
+        font-size: 13px;
+      }
+      .card {
+        height: 300px;
+      }
+    }
+  
+    @media only screen and (max-width: 575px) {
+      max-width: 300px;
+      p {
+        font-size: 10px;
+      }
+      .card {
+        height: 280px;
+      }
+    }
+  }
+  
+  /* Estilos para las tarjetas */
+  .cardHeader, 
+  .cardBody, 
+  .cardTitle, 
+  .cardText {
+    color: #c2f4fe;
+  }
+  
+  .footer {
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+    text-align: right;
+  }
+  
+  /* Estilos para el divisor de título */
+  .section-title-divider {
+    width: 64px;
+    height: 4px;
+    background: #04171b;
+    margin: 8px auto 24px;
+  }

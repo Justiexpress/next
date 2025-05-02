@@ -1,0 +1,35 @@
+import React, { useEffect } from "react";
+import styles from './ServiciosCard.module.scss';
+
+// Verificamos si AOS está disponible (solo en el cliente)
+const initAOS = () => {
+  if (typeof window !== 'undefined') {
+    // Importación dinámica de AOS solo en el cliente
+    import('aos').then((AOS) => {
+      AOS.init({
+        // Configuración por defecto si es necesaria
+      });
+    });
+  }
+};
+
+export const ServiciosText = () => {
+  // Inicializamos AOS cuando el componente se monta (solo en el cliente)
+  useEffect(() => {
+    initAOS();
+  }, []);
+
+  return (
+    <div
+      id="ServiciosText"
+      className="container"
+      data-aos="fade-up"
+      data-aos-duration="2500"
+    >
+      <h1>Nuestros servicios</h1>
+      <div className="section-title-divider"></div>
+    </div>
+  );
+};
+
+export default ServiciosText;

@@ -1,0 +1,40 @@
+.footer {
+    background-color: #04171b !important;
+    font-family: sans-serif;
+    width: 100%;
+    z-index: 999;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background: #111;
+    padding: 30px 0;
+    color: #fff;
+  }
+  
+  .link {
+    color: #03c4eb !important;
+    transition: 0.5s;
+    text-decoration: none;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .link:hover,
+  .link:active,
+  .link:focus {
+    color: #03c5ec !important;
+    outline: none;
+    text-decoration: none;
+  }
+  
+  .link :global(.bi),
+  .link svg {
+    vertical-align: middle;
+  }
+  
+  .link :global(svg.bi-twitter-x) {
+    margin-bottom: 2px; /* Ajuste fino para alinear con los otros íconos */
+  }

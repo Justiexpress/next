@@ -1,0 +1,84 @@
+.nav-bar {
+  background-color: #04171b !important;
+  font-family: "Open Sans";
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  padding-top: 20px;
+
+  // Logo - Sin cambios de tamaño
+  :global(.navbar-brand) {
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 35px;
+    text-align: center;
+    color: #c2f4fe;
+    padding-bottom: 20px;
+    transition: color 0.3s ease;
+    
+    &:hover {
+      color: #c2f4fe;
+      transform: none;
+    }
+  }
+
+  // Contenedor de items
+  .nav-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 40px;
+    align-items: center; // Asegura alineación vertical
+  }
+
+  // Items individuales
+  .nav-item {
+    text-align: center;
+    transition: all 0.8s;
+    color: white;
+
+    // Efecto "balancín" al hacer hover
+    &:hover {
+      transform: translate(2px, 2px);
+      color: #c2f4fe; // El item hover baja 5px
+
+      a {
+        color: #c2f4fe; // Color azul claro al hover
+      }
+    }
+
+    // Los demás items suben cuando uno está en hover
+    .nav-container &:not(:hover) {
+      transform: translateY(-3px); // Los demás suben 3px
+    }
+  }
+
+  // Resto de estilos...
+  :global(.navbar-toggler) {
+    border-color: white;
+    width: fit-content;
+  }
+
+  :global(.dropdown-menu) {
+    width: fit-content;
+  }
+
+  // Estilos para móvil
+  @media (max-width: 1200px) {
+    .nav-container {
+      flex-direction: column;
+      gap: 10px;
+
+      .nav-item {
+        &:hover {
+          transform: translateY(3px); // Menos movimiento en móvil
+        }
+
+        .nav-container &:not(:hover) {
+          transform: translateY(-1px); // Menos movimiento en móvil
+        }
+      }
+    }
+  }
+}
