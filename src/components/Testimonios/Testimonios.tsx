@@ -1,5 +1,6 @@
+'use client';
+
 import React from 'react';
-import styles from './Testimonios.module.scss';
 
 export const Testimonios = () => {
   return (

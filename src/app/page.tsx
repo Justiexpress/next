@@ -1,6 +1,8 @@
+'use client';
+
 import React, { useRef } from "react";
 import Head from "next/head";
-import { GetStaticProps } from "next";
+import { trackConversion } from '@/lib/tracking';
 
 // Componentes
 import { Contador } from "@/components/Contador/Contador";
@@ -248,24 +250,23 @@ const faqSchema = {
   }))
 };
 
-// Tipo para las props
+// Cambiamos la interfaz para eliminar la prop trackConversion
 interface HomeProps {
-  trackConversion?: (eventName: string, eventData?: any) => void;
+  // Dejamos la interfaz vacía ya que no hay más props
 }
 
-const Home: React.FC<HomeProps> = ({ trackConversion }) => {
+const Home: React.FC<HomeProps> = () => {
   // Referencias para scroll
   const serviciosRef = useRef<HTMLElement>(null);
   const contactoRef = useRef<HTMLElement>(null);
   
   // Función para manejar el click en servicios
   const handleServiceClick = (serviceId: string, whatsappMsg: string) => {
-    if (trackConversion) {
-      trackConversion('service_click', { 
-        service: serviceId,
-        position: 'service_card'
-      });
-    }
+    // Usamos directamente trackConversion sin verificar existencia
+    trackConversion('service_click', { 
+      service: serviceId,
+      position: 'service_card'
+    });
     
     // Redireccionar a WhatsApp con mensaje personalizado
     const encodedMsg = encodeURIComponent(whatsappMsg);
@@ -310,9 +311,8 @@ const Home: React.FC<HomeProps> = ({ trackConversion }) => {
               rel="noopener noreferrer"
               aria-label="Contactar por WhatsApp para asistencia inmediata"
               onClick={() => {
-                if (trackConversion) {
-                  trackConversion('whatsapp_conversion', {position: 'hero_button'});
-                }
+                // Llamamos directamente a trackConversion
+                trackConversion('whatsapp_conversion', {position: 'hero_button'});
                 return true;
               }}
             >
@@ -452,12 +452,11 @@ const Home: React.FC<HomeProps> = ({ trackConversion }) => {
         >
           <Form 
             onSubmit={(data) => {
-              if (trackConversion) {
-                trackConversion('form_submission', { 
-                  formType: 'contact',
-                  formLocation: 'homepage'
-                });
-              }
+              // Llamamos directamente a trackConversion
+              trackConversion('form_submission', { 
+                formType: 'contact',
+                formLocation: 'homepage'
+              });
             }} 
           />
         </section>
@@ -489,7 +488,7 @@ const Home: React.FC<HomeProps> = ({ trackConversion }) => {
               darkMode={true}
               allowClickAway={true}
               aria-label="Chat de WhatsApp para consultas legales"
-              onClick={() => trackConversion?.('whatsapp_click', {position: 'floating_button'})}
+              onClick={() => trackConversion('whatsapp_click', {position: 'floating_button'})}
             />
         </aside>
       </main>

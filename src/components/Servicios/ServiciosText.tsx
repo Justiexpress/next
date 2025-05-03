@@ -1,5 +1,6 @@
+'use client';
+
 import React, { useEffect } from "react";
-import styles from './ServiciosCard.module.scss';
 
 // Verificamos si AOS está disponible (solo en el cliente)
 const initAOS = () => {

@@ -1,9 +1,11 @@
+'use client';
+
 import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import styles from "./BarraNav.module.scss";
 
 interface BarraNavProps {

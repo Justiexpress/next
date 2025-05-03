@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'aos/dist/aos.css';
 import '../styles/globals.scss';
+import { Providers } from './providers';
 
 
 // Función para trackear eventos de conversión
@@ -70,9 +71,9 @@ export default function RootLayout({
           <link itemProp="image" href="https://www.justiexpress.com/logo.png" />
           <meta itemProp="telephone" content="+573185725324" />
           <meta itemProp="email" content="contacto@justiexpress.com" />
-          <main className="main-content">
-            {children}
-          </main>
+          <Providers>
+          {children}
+        </Providers>
         </div>
       </body>
     </html>
