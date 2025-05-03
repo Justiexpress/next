@@ -9,7 +9,7 @@ import '../styles/globals.scss';
 import { Providers } from './providers';
 
 export const metadata: Metadata = {
-  title: 'Justiexpress | Asesoría Legal Online - Tutelas y Derechos de Petición',
+  title: 'Justiexpress | Tutelas, Derechos de Petición y Asesoría Legal',
   description: 'Tutelas, derechos de petición, reclamaciones, asesorías. Abogados expertos. ¡Contáctanos ya!',
   keywords: 'tutela colombia, derecho de petición, abogados online, asesoría legal digital, reclamaciones legales, desacatos, impugnaciones, contratos, justiexpress',
   openGraph: {

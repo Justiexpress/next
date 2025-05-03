@@ -4,6 +4,13 @@
 @import '@fontsource/open-sans/500.css';
 @import '@fontsource/open-sans/600.css';
 
+/* Variables CSS para facilitar el diseño responsivo */
+:root {
+  --primary-color: #03c4eb;
+  --secondary-color: #04171b;
+  --text-color: #333;
+}
+
 // Estilos base (equivalente a index.scss)
 html {
   font-family: "Open Sans", sans-serif;
