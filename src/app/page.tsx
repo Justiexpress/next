@@ -328,7 +328,7 @@ const Home: React.FC<HomeProps> = () => {
           data-aos-duration="1500"
           aria-label="Estadísticas de la empresa"
         >
-          <h2 className="section-title text-center">Resultados en tutelas, derechos de petición, contratos y otros servicios:</h2>
+          <p className="section-title text-center">Resultados en tutelas, derechos de petición, contratos y otros servicios:</p>
           <div className="row">
             <article className="col-sm-4 text-center">
               <Contador

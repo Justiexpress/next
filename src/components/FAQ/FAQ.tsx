@@ -73,7 +73,7 @@ export const FAQ: React.FC<FAQSectionProps> = ({
       aria-label="Preguntas frecuentes"
     >
       <div className="container">
-        <h1 className={`${styles["section-title"]} text-center`}>Preguntas Frecuentes</h1>
+        <h2>Preguntas Frecuentes</h2>
         <div className="section-title-divider"></div>
 
         <div className={styles["faq-container"]}>

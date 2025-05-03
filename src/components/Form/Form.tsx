@@ -85,7 +85,7 @@ export const Form: React.FC<FormProps> = ({ onSubmit }) => {
 
   return (
     <div id="Contáctanos" className={styles.contactanos} data-aos="fade-up" data-aos-duration="2500">
-      <h1>¿Alguna duda? / Contáctanos</h1>
+      <h2>¿Alguna duda? / Contáctanos</h2>
       <div className="section-title-divider"></div>
       
       <div className="container">

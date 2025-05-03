@@ -29,8 +29,8 @@ const trackConversion = (eventName: string, eventData = {}) => {
 };
 
 export const metadata: Metadata = {
-  title: 'Justiexpress | Asesoría Legal Online en Colombia - Tutelas y Derechos de Petición',
-  description: 'Servicios legales profesionales para personas y empresas: Tutelas, derechos de petición, reclamaciones y más. Abogados expertos listos para ayudarte. ¡Contáctanos ya!',
+  title: 'Justiexpress | Asesoría Legal Online - Tutelas y Derechos de Petición',
+  description: 'Tutelas, derechos de petición, reclamaciones, asesorías. Abogados expertos. ¡Contáctanos ya!',
   keywords: 'tutela colombia, derecho de petición, abogados online, asesoría legal digital, reclamaciones legales, desacatos, impugnaciones, contratos, justiexpress',
   openGraph: {
     title: 'Justiexpress | Asesoría Legal Online en Colombia',
