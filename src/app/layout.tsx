@@ -1,12 +1,12 @@
 import React from 'react';
 import { Metadata } from 'next';
+import Script from 'next/script';
 import '@fontsource/open-sans';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'aos/dist/aos.css';
 import '../styles/globals.scss';
 import { Providers } from './providers';
-
 
 // Función para trackear eventos de conversión
 const trackConversion = (eventName: string, eventData = {}) => {
@@ -19,7 +19,7 @@ const trackConversion = (eventName: string, eventData = {}) => {
         ...eventData
       });
     }
-
+    
     // Facebook Pixel tracking
     const fbqFunction = (window as any).fbq;
     if (fbqFunction) {
@@ -64,6 +64,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
+      <head>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-0RH4X36HRM"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-0RH4X36HRM');
+          `}
+        </Script>
+      </head>
       <body>
         <div className="app-container" itemScope itemType="https://schema.org/LegalService">
           <meta itemProp="name" content="Justiexpress - Servicios Legales Online" />
@@ -72,8 +87,8 @@ export default function RootLayout({
           <meta itemProp="telephone" content="+573185725324" />
           <meta itemProp="email" content="contacto@justiexpress.com" />
           <Providers>
-          {children}
-        </Providers>
+            {children}
+          </Providers>
         </div>
       </body>
     </html>
