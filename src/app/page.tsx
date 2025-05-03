@@ -479,17 +479,27 @@ const Home: React.FC<HomeProps> = () => {
           <Footer />
           <SocialBar />
           <FloatingWhatsApp
-              phoneNumber={"573185725324"}
-              accountName={"Justiexpress"}
-              avatar={logo.src}
-              statusMessage={"En línea | Respuesta inmediata"}
-              chatMessage={"Hola, ¿en qué podemos ayudarte con tu caso legal?"}
-              placeholder={"Escribe tu consulta..."}
-              darkMode={true}
-              allowClickAway={true}
-              aria-label="Chat de WhatsApp para consultas legales"
-              onClick={() => trackConversion('whatsapp_click', {position: 'floating_button'})}
-            />
+  phoneNumber="573185725324"
+  accountName="Justiexpress"
+  avatar={logo.src}
+  statusMessage="En línea | Respuesta inmediata"
+  chatMessage="Hola, ¿en qué podemos ayudarte con tu caso legal?"
+  placeholder="Escribe tu consulta..."
+  darkMode={true}
+  allowClickAway={true}
+  notification={true}
+  notificationSound={true}
+  aria-label="Chat de WhatsApp para consultas legales"
+  onClick={() => {
+    trackConversion('whatsapp_click', {position: 'floating_button'});
+    setTimeout(() => {
+      const input = document.querySelector('.floating-whatsapp input, .floating-whatsapp textarea');
+      if (input) {
+        input.addEventListener('click', (e) => e.stopPropagation());
+      }
+    }, 500);
+  }}
+/>
         </aside>
       </main>
     </>
