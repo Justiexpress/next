@@ -65,7 +65,9 @@ export default function RootLayout({
           <meta itemProp="description" content="Servicios legales profesionales en Colombia: tutelas, derechos de petición y asesoría jurídica" />
           <link itemProp="image" href="https://www.justiexpress.com/logo.png" />
           <meta itemProp="telephone" content="+573185725324" />
-          <meta itemProp="email" content="contacto@justiexpress.com" />
+          <meta itemProp="email" content="justiexpress@gmail.com" />
+          <meta itemProp="address" content="Calle 45 # 6-58" />
+          <meta itemProp="priceRange" content="$" />
           <Providers>
             {children}
           </Providers>

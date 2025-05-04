@@ -328,13 +328,24 @@ const Home: React.FC<HomeProps> = () => {
           data-aos-duration="1500"
           aria-label="Estadísticas de la empresa"
         >
-          <p className="section-title text-center">Resultados en tutelas, derechos de petición, contratos y otros servicios:</p>
+          <div className="stats-title-container">
+  <h2 className="stats-heading">
+    <span className="stats-heading-accent">Resultados que hablan por sí mismos</span>
+  </h2>
+  <div className="stats-title-divider">
+    <div className="stats-divider-left"></div>
+    <div className="stats-divider-icon">
+      <i className="bi bi-clipboard-data"></i>
+    </div>
+    <div className="stats-divider-right"></div>
+  </div>
+</div>
           <div className="row">
             <article className="col-sm-4 text-center">
               <Contador
                 title={"clientes satisfechos"}
-                end={1000}
-                duration={4}
+                end={2000}
+                duration={3}
                 prefix={"+ "}
                 style={{ color: "#c4c2f9" }}
                 iconStyle={{ color: "#c4c2f9" }}
@@ -346,7 +357,7 @@ const Home: React.FC<HomeProps> = () => {
               <Contador
                 title={"documentos entregados"}
                 end={2000}
-                duration={4}
+                duration={3}
                 prefix={"+ "}
                 style={{ color: "#80cac4" }}
                 iconStyle={{ color: "#80cac4" }}
@@ -358,7 +369,7 @@ const Home: React.FC<HomeProps> = () => {
               <Contador
                 title={"asesorías realizadas"}
                 end={4000}
-                duration={4}
+                duration={3}
                 prefix={"+ "}
                 style={{ color: "#c4c2f9" }}
                 iconStyle={{ color: "#c4c2f9" }}
