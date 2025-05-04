@@ -65,14 +65,14 @@ const serviciosData = [
     whatsappMsg: "Hola JustiExpress, necesito presentar un desacato."
   },
   {
-    id: "impugnaciones",
-    title: "Impugnaciones",
-    description: "¿No estás de acuerdo con la decisión de tu tutela? Impugna la decisión dentro del término legal",
+    id: "registro-marcas",
+    title: "Registro de Marcas",
+    description: "Protege la marca de tu negocio con nuestro servicio de registros ante la SIC",
     icon: "bi bi-circle-fill text-center",
     style: { color: "#fff0da" },
     buttonVariant: "outline-primary",
-    ctaText: "Iniciar impugnación",
-    whatsappMsg: "Hola JustiExpress, necesito impugnar una decisión de tutela."
+    ctaText: "Solicitar Registo",
+    whatsappMsg: "Hola JustiExpress, necesito un registro de marca."
   },
   {
     id: "consultoria-juridica",
