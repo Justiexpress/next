@@ -63,7 +63,7 @@ export const BarraNav = ({ isHome = true }: BarraNavProps) => {
             >
               <Nav className={`${styles["nav-container"]} mx-auto`}>
                 <Nav.Link
-                  onClick={() => scrollToSection("ServiciosCard")}
+                  onClick={() => scrollToSection("ServiciosText")}
                   className={styles["nav-item"]}
                 >
                   Servicios
