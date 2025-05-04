@@ -58,6 +58,11 @@ export default function RootLayout({
             gtag('config', 'G-0RH4X36HRM');
           `}
         </Script>
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="167x167" href="/apple-touch-icon-167x167.png" />
+        <link rel="icon" href="/favicon.ico" />
       </head>
       <body>
         <div className="app-container" itemScope itemType="https://schema.org/LegalService">
