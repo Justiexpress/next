@@ -88,6 +88,18 @@ export const Footer = () => {
                   style={{ color: "#fff", fontSize: "35px" }}
                 ></i>
               </a>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <a
+                href="https://www.tiktok.com/@tucasolegal"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.link}
+              >
+                <i
+                  className="bi bi-tiktok"
+                  style={{ color: "#fff", fontSize: "35px" }}
+                ></i>
+              </a>
             </div>
           </div>
         </div>

@@ -26,6 +26,14 @@ export const SocialBar = () => {
           </svg>
         </a>
         <a
+          href="https://www.tiktok.com/@tucasolegal"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.tiktok}
+        >
+          <i className="bi bi-tiktok"></i>
+        </a>
+        <a
           href="https://www.linkedin.com/company/justiexpress"
           target="_blank"
           rel="noopener noreferrer"

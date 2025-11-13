@@ -5,9 +5,36 @@
   top: 0;
   width: 100%;
   z-index: 999;
-  padding-top: 20px;
+  padding-top: 5px;
+  padding-bottom: 0px;
 
-  // Logo - Sin cambios de tamaño
+  // Logo + Texto - Nueva clase para el brand con logo
+  .brand-with-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 35px;
+    text-align: center;
+    color: #c2f4fe;
+    padding-bottom: 20px;
+    transition: color 0.3s ease;
+    
+    &:hover {
+      color: #c2f4fe;
+      transform: none;
+    }
+  }
+
+  // Estilos del logo
+  .logo {
+    border-radius: 8px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(194, 244, 254, 0.2));
+  }
+
+  // Logo - Mantiene estilos originales para compatibilidad
   :global(.navbar-brand) {
     letter-spacing: 1px;
     font-weight: 400;
@@ -29,7 +56,7 @@
     justify-content: center;
     width: 100%;
     gap: 40px;
-    align-items: center; // Asegura alineación vertical
+    align-items: center;
   }
 
   // Items individuales
@@ -41,16 +68,16 @@
     // Efecto "balancín" al hacer hover
     &:hover {
       transform: translate(2px, 2px);
-      color: #c2f4fe; // El item hover baja 5px
+      color: #c2f4fe;
 
       a {
-        color: #c2f4fe; // Color azul claro al hover
+        color: #c2f4fe;
       }
     }
 
     // Los demás items suben cuando uno está en hover
     .nav-container &:not(:hover) {
-      transform: translateY(-3px); // Los demás suben 3px
+      transform: translateY(-3px);
     }
   }
 
@@ -66,18 +93,40 @@
 
   // Estilos para móvil
   @media (max-width: 1200px) {
+    .brand-with-logo {
+      font-size: 28px;
+      
+      .logo {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
     .nav-container {
       flex-direction: column;
       gap: 10px;
 
       .nav-item {
         &:hover {
-          transform: translateY(3px); // Menos movimiento en móvil
+          transform: translateY(3px);
         }
 
         .nav-container &:not(:hover) {
-          transform: translateY(-1px); // Menos movimiento en móvil
+          transform: translateY(-1px);
         }
+      }
+    }
+  }
+
+  // Ajuste fino para tablets
+  @media (max-width: 768px) {
+    .brand-with-logo {
+      font-size: 24px;
+      gap: 8px;
+      
+      .logo {
+        width: 35px;
+        height: 35px;
       }
     }
   }

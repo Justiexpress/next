@@ -5,6 +5,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import styles from "./BarraNav.module.scss";
 
@@ -24,14 +25,12 @@ export const BarraNav = ({ isHome = true }: BarraNavProps) => {
   const scrollToSection = (sectionId: string) => {
     handleNavClick();
     
-    // Si estamos en la página de inicio, hacemos scroll suave
     if (pathname === "/") {
       const element = document.getElementById(sectionId);
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
       }
     } else {
-      // Si no estamos en la página de inicio, redirigimos a la página de inicio con el fragmento
       router.push(`/#${sectionId}`);
     }
   };
@@ -46,7 +45,17 @@ export const BarraNav = ({ isHome = true }: BarraNavProps) => {
       className={styles["nav-bar"]}
     >
       <Container>
-        <Navbar.Brand as={Link} href="/">Justiexpress</Navbar.Brand>
+        <Navbar.Brand as={Link} href="/" className={styles["brand-with-logo"]}>
+          <Image
+            src="/logo.png"
+            alt="Justiexpress Logo"
+            width={100}
+            height={100}
+            className={styles.logo}
+            priority
+          />
+          <span>Justiexpress</span>
+        </Navbar.Brand>
         
         {isHome ? (
           <>
@@ -96,7 +105,6 @@ export const BarraNav = ({ isHome = true }: BarraNavProps) => {
             </div>
           </>
         ) : (
-          // Versión simplificada para páginas TyC
           <></>
         )}
       </Container>

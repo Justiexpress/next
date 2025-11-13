@@ -70,3 +70,13 @@
       transform: scale(1.1, 1);
     }
   }
+
+  .tiktok {
+  background: #04171b;
+    color: white !important;
+    
+    &:hover {
+      color: #c2f4fe !important;
+      transform: scale(1.1, 1);
+    }
+}
