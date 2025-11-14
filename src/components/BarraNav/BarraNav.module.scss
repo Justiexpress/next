@@ -19,11 +19,15 @@
     text-align: center;
     color: #c2f4fe;
     padding-bottom: 20px;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
     
     &:hover {
       color: #c2f4fe;
       transform: none;
+    }
+
+    span {
+      transition: all 0.3s ease;
     }
   }
 
@@ -32,6 +36,7 @@
     border-radius: 8px;
     object-fit: contain;
     filter: drop-shadow(0 2px 4px rgba(194, 244, 254, 0.2));
+    transition: all 0.3s ease;
   }
 
   // Logo - Mantiene estilos originales para compatibilidad
@@ -91,14 +96,26 @@
     width: fit-content;
   }
 
-  // Estilos para móvil
+  // Estilos para móvil - OPTIMIZADOS
   @media (max-width: 1200px) {
+    // Más padding vertical para dar más espacio
+    padding-top: 10px;
+    padding-bottom: 10px;
+
     .brand-with-logo {
-      font-size: 28px;
+      font-size: 32px; // Más grande que antes (era 28px)
+      font-weight: 500; // Un poco más bold
+      gap: 15px; // Más espacio entre logo y texto
+      padding-bottom: 15px;
       
       .logo {
-        width: 40px;
-        height: 40px;
+        width: 60px; // Mucho más grande (era 40px)
+        height: 60px;
+        filter: drop-shadow(0 3px 6px rgba(194, 244, 254, 0.3));
+      }
+
+      span {
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); // Sombra al texto
       }
     }
 
@@ -118,15 +135,64 @@
     }
   }
 
-  // Ajuste fino para tablets
+  // Ajuste para tablets y móviles grandes
+  @media (max-width: 992px) {
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    .brand-with-logo {
+      font-size: 30px;
+      gap: 14px;
+      
+      .logo {
+        width: 55px;
+        height: 55px;
+      }
+    }
+  }
+
+  // Móviles medianos
   @media (max-width: 768px) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    .brand-with-logo {
+      font-size: 28px;
+      gap: 12px;
+      padding-bottom: 12px;
+      
+      .logo {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+
+  // Móviles pequeños - aquí aprovechamos TODO el espacio
+  @media (max-width: 576px) {
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    .brand-with-logo {
+      font-size: 26px;
+      gap: 10px;
+      
+      .logo {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  }
+
+  // Móviles muy pequeños
+  @media (max-width: 375px) {
     .brand-with-logo {
       font-size: 24px;
       gap: 8px;
       
       .logo {
-        width: 35px;
-        height: 35px;
+        width: 45px;
+        height: 45px;
       }
     }
   }

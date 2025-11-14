@@ -18,6 +18,7 @@ import { FAQ } from "@/components/FAQ/FAQ";
 import { Footer } from '@/components/Footer/Footer';
 import { SocialBar } from '@/components/SocialBar/SocialBar';
 import { FloatingWhatsApp } from 'react-floating-whatsapp';
+import SocialMediaSection from '@/components/SocialMediaSection';
 
 // Imágenes
 import logo from '../assets/img/logo.png';
@@ -379,7 +380,7 @@ const Home: React.FC<HomeProps> = () => {
             </article>
           </div>
         </section>
-
+<SocialMediaSection />
         <section 
           id="servicios" 
           aria-label="Nuestros servicios legales"
