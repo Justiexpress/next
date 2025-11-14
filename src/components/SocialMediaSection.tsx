@@ -23,28 +23,25 @@ const SocialMediaSection = () => {
       icon: 'bi-tiktok',
       url: 'https://www.tiktok.com/@tucasolegal',
       color: '#000000',
-      handle: '@justiexpress'
+
     },
         { 
       name: 'Instagram', 
       icon: 'bi-instagram',
       url: 'https://www.instagram.com/justiexpress.legal',
       color: '#E1306C',
-      handle: '@justiexpress'
     },
     { 
       name: 'YouTube', 
       icon: 'bi-youtube',
       url: 'https://www.youtube.com/channel/UCSQYCc0FrL8CrdIAySmNX0w',
       color: '#FF0000',
-      handle: '@justiexpress'
     },
     { 
       name: 'Facebook', 
       icon: 'bi-facebook',
       url: 'https://www.facebook.com/justiexpress',
       color: '#1877F2',
-      handle: 'justiexpress'
     },
   ];
 
