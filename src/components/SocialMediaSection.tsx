@@ -435,14 +435,6 @@ const SocialMediaSection = () => {
                     }}>
                       {social.name}
                     </p>
-                    <p className="social-handle" style={{
-                      color: '#6b7280',
-                      fontSize: '0.875rem',
-                      margin: 0,
-                      transition: 'color 0.5s',
-                    }}>
-                      {social.handle}
-                    </p>
                   </div>
                 </div>
               </div>
