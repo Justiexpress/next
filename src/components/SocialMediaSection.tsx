@@ -386,12 +386,18 @@ const SocialMediaSection = () => {
                 style={{
                   position: 'relative',
                   background: 'white',
-                  borderRadius: '20px',
-                  padding: '1.25rem',
+                  borderRadius: '15px',
+                  padding: '1rem',
                   transition: 'all 0.5s',
                   border: '2px solid #e5e7eb',
                   cursor: 'pointer',
                   boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
+                  width: '120px',
+                  height: '120px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'center',
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.borderColor = '#03c4eb';
@@ -408,10 +414,10 @@ const SocialMediaSection = () => {
                   display: 'flex',
                   flexDirection: 'column',
                   alignItems: 'center',
-                  gap: '0.75rem',
+                  gap: '0.5rem',
                 }}>
                   <div style={{
-                    padding: '1rem',
+                    padding: '0.75rem',
                     borderRadius: '50%',
                     background: `${social.color}10`,
                     transition: 'all 0.5s',
@@ -420,7 +426,7 @@ const SocialMediaSection = () => {
                     <i 
                       className={social.icon}
                       style={{
-                        fontSize: '2rem',
+                        fontSize: '1.75rem',
                         color: social.color,
                       }}
                     ></i>
@@ -429,8 +435,8 @@ const SocialMediaSection = () => {
                     <p className="social-name" style={{
                       color: '#04171b',
                       fontWeight: '600',
-                      fontSize: '1rem',
-                      margin: '0 0 0.25rem 0',
+                      fontSize: '0.875rem',
+                      margin: '0',
                       transition: 'color 0.5s',
                     }}>
                       {social.name}

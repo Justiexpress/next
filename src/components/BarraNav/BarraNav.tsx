@@ -28,7 +28,23 @@ export const BarraNav = ({ isHome = true }: BarraNavProps) => {
     if (pathname === "/") {
       const element = document.getElementById(sectionId);
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+        // Calcular la altura del navbar
+        const navbarHeight = document.getElementById('nav-bar')?.offsetHeight || 100;
+        
+        // Ajustar offset según la sección
+        let extraOffset = 20; // Offset por defecto
+        if (sectionId === "FAQ") {
+          extraOffset = -30; // Para FAQ, subir un poco más (valor negativo baja más)
+        }
+        
+        // Obtener la posición del elemento
+        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+        
+        // Scroll con offset para que no quede tapado por el navbar
+        window.scrollTo({
+          top: elementPosition - navbarHeight - extraOffset,
+          behavior: "smooth"
+        });
       }
     } else {
       router.push(`/#${sectionId}`);
